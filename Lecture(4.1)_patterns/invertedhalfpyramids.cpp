@@ -15,3 +15,6 @@ int main(){
     }
        return 0;
 }
+
+
+// inverted half pyramids pattern
