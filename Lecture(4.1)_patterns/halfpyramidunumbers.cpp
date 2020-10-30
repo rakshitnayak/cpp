@@ -34,3 +34,5 @@ int main(){
 
 
 }
+
+// half pyramid using numbers and flyods triangle pattern
