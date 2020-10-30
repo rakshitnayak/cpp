@@ -16,3 +16,5 @@ int main(){
         }cout<<endl;
     }
 }
+
+// half pyramid pattern after 180 deg rotation
