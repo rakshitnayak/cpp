@@ -7,11 +7,11 @@ using namespace std;
 int main()
 {
 
-    string s = "ggkksorrlaasew";
+    string s = "fajsskalwiwnwm";
 
     int freq[26];
 
-    for (int i = 0; i <= 26; i++)
+    for (int i = 0; i < 26; i++)
         freq[i] = 0;
 
     for (int i = 0; i < s.size(); i++)
