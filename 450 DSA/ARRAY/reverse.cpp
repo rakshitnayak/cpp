@@ -9,10 +9,11 @@ main()
     {
         cin >> arr[i];
     }
-    cout << "The reversed array is: " << endl;
+    // cout << "The reversed array is: " << endl;
     for (i = n - 1; i >= 0; i--)
     {
 
         cout << arr[i] << " ";
     }
+    return 0;
 }
