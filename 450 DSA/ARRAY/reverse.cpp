@@ -17,3 +17,5 @@ main()
     }
     return 0;
 }
+
+//time complexity is o(n) which is linear TC

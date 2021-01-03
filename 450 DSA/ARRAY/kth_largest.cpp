@@ -34,11 +34,12 @@ int main()
     }
     cout << endl;
 
-    cout << "Now enter the kth smallest number in sorted array :" << endl;
+    cout << "Now enter the kth largest number in sorted array :" << endl;
     int k;
     cin >> k;
-    cout << arr[n - k] << " is the kth smallest element in the array";
+    cout << arr[n - k] << " is the kth largest element in the array";
     return 0;
 }
 
 /* this can also be done with stl ,heap,and quicksort! refer leetcode"*/
+//time complexity is O(n^2),this can be done with less runtime using heap and stuff

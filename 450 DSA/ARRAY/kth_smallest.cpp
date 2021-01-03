@@ -40,3 +40,5 @@ int main()
     cout << arr[k - 1] << " is the kth smallest element in the array";
     return 0;
 }
+/* this can also be done with stl ,heap,and quicksort! refer leetcode"*/
+//time complexity is O(n^2),this can be done with less runtime using heap and stuff
