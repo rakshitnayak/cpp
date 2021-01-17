@@ -48,6 +48,23 @@ void display(node *head)
     cout << "NULL " << endl;
 }
 
+node* reverse(node* &head){
+   node* prevptr=NULL;
+   node* currptr=head;
+   node* nextptr;
+
+
+   while(currptr!=NULL){
+       nextptr=currptr->next;
+       currptr->next=prevptr;
+       prevptr=currptr;
+       currptr=nextptr;
+
+   }
+
+    return prevptr;
+}
+
 bool search(node *head, int key)
 {
     node *temp = head;
@@ -104,10 +121,13 @@ int main()
     insertAtTail(head, 4);
     display(head);
 
+    node* newhead=reverse(head);
+    display(newhead);
+
     // cout << search(head, 2) << endl;
     // deletion(head, 2);
-    deleteAtHead(head);
-    display(head);
+    // deleteAtHead(head);
+    // display(head);
 
     return 0;
 }
