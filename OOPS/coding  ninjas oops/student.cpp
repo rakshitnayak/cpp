@@ -20,6 +20,12 @@ public:
         rollNumber = r;
     }
 
+    student(int rollNumber)
+    {
+        cout << "this:" << this << endl; //this is a keyword which holds the adress of the current object.
+        this->rollNumber = rollNumber;
+    }
+
     void display()
     {
         cout << age << " " << rollNumber << endl; //we can access the age in the same class if it is private also
