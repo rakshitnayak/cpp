@@ -14,3 +14,11 @@ int main()
     s1.display();
     s2->display();
 }
+
+//what exactly happens when we call student s1, ?
+//ans: internally s1.student(); function gets called which is not visible to us.
+//this special function is called as default constructor.
+/** 
+this default constructor has same name as class!, No return type, no input arguments.
+Note:each and every class initializes deefault constructor.
+**/

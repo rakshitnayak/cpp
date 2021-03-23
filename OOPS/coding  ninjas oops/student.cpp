@@ -7,6 +7,19 @@ private:
     int age;
 
 public:
+    //default constructor.
+    student()
+    {
+        cout << "constructor called" << endl;
+    }
+
+    //parameterized constructor.  as soon as parameterized constructor gets called. default constructor gets vanished.!
+    student(int agee, int r)
+    {
+        age = agee;
+        rollNumber = r;
+    }
+
     void display()
     {
         cout << age << " " << rollNumber << endl; //we can access the age in the same class if it is private also
