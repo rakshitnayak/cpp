@@ -7,6 +7,11 @@ private:
     int age;
 
 public:
+    //destructor
+    ~student()
+    {
+        cout << "destructor called " << endl;
+    }
     //default constructor.
     student()
     {
