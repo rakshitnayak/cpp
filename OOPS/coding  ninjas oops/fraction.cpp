@@ -35,7 +35,7 @@ public:
         this->denominator = this->denominator / gcd;
     }
 
-    void add(Fraction f2)
+    void add(Fraction const &f2)
     {
         int lcm = denominator * f2.denominator;
         int x = lcm / denominator;
@@ -46,6 +46,13 @@ public:
         numerator = num;
         denominator = lcm;
 
+        simplify();
+    }
+
+    void multiply(Fraction const &f2)
+    {
+        numerator = numerator * f2.numerator;
+        denominator = denominator * f2.denominator;
         simplify();
     }
 };
