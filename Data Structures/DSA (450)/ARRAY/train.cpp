@@ -1,6 +1,7 @@
 //tcs nqt problem :https://www.geeksforgeeks.org/tcs-nqt-2020-trains/
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 //online logic
@@ -50,7 +51,7 @@ void settime(float arr[], int n, float time)
     int itime, idecimal;
     itime = (int)time;
 
-    if (time >= 0.0 && time < 24.0 && (time - itime) <= 0.60)
+    if (time >= 0.0 && time <= 24.0 && (time - itime) <= 0.60)
     {
 
         for (int i = 0; i < n; i++)
@@ -67,7 +68,7 @@ void settime(float arr[], int n, float time)
                 x = x - 24.0;
             }
 
-            cout << x << " ";
+            cout << setprecision(3) << x << " ";
         }
     }
     else
