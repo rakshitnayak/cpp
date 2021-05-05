@@ -47,7 +47,6 @@ int main()
         cout << x << " ";
     }
     cout << endl;
-
     //size
     cout << d.size() << endl;
     cout << d.capacity() << endl;
