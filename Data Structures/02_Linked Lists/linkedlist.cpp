@@ -2,6 +2,33 @@
 using namespace std;
 #include "Node.cpp"
 
+Node *takeInput()
+{
+    int data;
+    cin >> data;
+    Node *head = NULL;
+    while (data != -1) //-1 for termination
+    {
+        Node *newNode = new Node(data); //dynamically
+        if (head == NULL)
+        {
+            head = newNode;
+        }
+        else
+        {
+            Node *temp = head;
+            while (temp->next != NULL)
+            {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+        }
+
+        cin >> data;
+    }
+    return head;
+}
+
 void print(Node *head) //pass the address of the first node of linked list,with this we can traverse whole linked list
 {
     Node *temp = head; // to not loose the head value we store the head in temp
@@ -14,6 +41,10 @@ void print(Node *head) //pass the address of the first node of linked list,with 
 
 int main()
 {
+    Node *head = takeInput();
+    print(head);
+
+    /**
     //statically
     Node n1(1); //creates a node n1 with data and null [1|null]
 
@@ -30,7 +61,7 @@ int main()
     n3.next = &n4; //connects n3 with n4 [3|n4's address]
     n4.next = &n5; //connects n4 with n5 [5|n5's address]
 
-    print(head);
+    print(head); **/
 
     //dynamically
 
