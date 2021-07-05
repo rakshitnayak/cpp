@@ -2,26 +2,26 @@
 using namespace std;
 #include "Node.cpp"
 
-Node *takeInput()
+Node *takeInput_Better()
 {
     int data;
     cin >> data;
     Node *head = NULL;
+    Node *tail = NULL;
     while (data != -1) //-1 for termination
     {
         Node *newNode = new Node(data); //dynamically
         if (head == NULL)
         {
             head = newNode;
+            tail = newNode; //last node of the linked list
         }
         else
         {
-            Node *temp = head;
-            while (temp->next != NULL)
-            {
-                temp = temp->next;
-            }
-            temp->next = newNode;
+            tail->next = newNode;
+            tail = tail->next;
+            //or
+            //tail=newNode;
         }
 
         cin >> data;
@@ -41,7 +41,7 @@ void print(Node *head) //pass the address of the first node of linked list,with 
 
 int main()
 {
-    Node *head = takeInput();
+    Node *head = takeInput_Better();
     print(head);
 
     /**
