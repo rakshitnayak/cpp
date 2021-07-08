@@ -39,9 +39,41 @@ void print(Node *head) //pass the address of the first node of linked list,with 
     }
 }
 
+Node *insertNode(Node *head, int i, int data)
+{
+    Node *newNode = new Node(data);
+    int count = 0;
+    Node *temp = head;
+
+    if (i == 0) //when data is to be inserted at oth position.
+    {
+        newNode->next = head;
+        head = newNode;
+        return head; //only in this case we need to return head because only in this case head value is changing.
+    }
+    while (temp != NULL && count < i - 1)
+    {
+        temp = temp->next;
+        count++;
+    }
+    if (temp != NULL) //gives segmentation fault ,because you cannot insert value at null->next,hence only run when trmp!=null.
+    {
+        Node *a = temp->next;
+        temp->next = newNode;
+        newNode->next = a;
+    }
+    return head;
+}
+
 int main()
 {
     Node *head = takeInput_Better();
+    print(head);
+
+    //taking input
+    int i, data;
+    cin >> i >> data;
+    head = insertNode(head, i, data);
     print(head);
 
     /**
